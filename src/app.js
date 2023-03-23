@@ -1,4 +1,9 @@
-const myH2 = <h2>React Js</h2>;
+const myH2 = (
+  <>
+    <h2> H2 tag worked - React JS </h2>
+    <p>P tag working </p>
+  </>
+);
 
 const appDiv = document.getElementById("app");
 
