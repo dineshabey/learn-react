@@ -13,35 +13,33 @@ const studentsArray = [
   },
 ];
 
-
-
 function getResult(mark) {
   if (mark <= 100 && 0 <= mark) {
     if (mark >= 80) {
-      return "A";
+      return <span style={{ color: "green" }}>A</span>;
     } else if (mark >= 60) {
-      return "B";
+      return <span style={{ color: "yellow" }}>B</span>;
     } else if (mark >= 50) {
-      return "C";
+      return <span style={{ color: "blue" }}>C</span>;
     } else if (mark >= 40) {
-      return "S";
+      return <span>{{ color: "black" }}>A</span>;
     } else {
-      return "F";
+      return <span style={{ color: "red" }}>A</span>;
     }
   } else {
-    return "Invalid Result";
+    return <span style={{ color: "red" }}>Invalid result</span>;
   }
 }
 
 const student1 = (
-    <>
-      <h2> Name : {studentsArray[0].name} </h2>
-      <p>Reg No : {studentsArray[0].regNo}</p>
-      <p>Email : {studentsArray[0].email}</p>
-      <p>Marks : {studentsArray[0].marks}</p>
-      <p>Result : {getResult(studentsArray[0].marks)}</p>
-    </>
-  );
+  <>
+    <h2> Name : {studentsArray[0].name} </h2>
+    <p>Reg No : {studentsArray[0].regNo}</p>
+    <p>Email : {studentsArray[0].email}</p>
+    <p>Marks : {studentsArray[0].marks}</p>
+    <p>Result : {getResult(studentsArray[0].marks)}</p>
+  </>
+);
 
 const student2 = (
   <>
@@ -50,7 +48,6 @@ const student2 = (
     <p>Email : {studentsArray[1].email}</p>
     <p>Marks : {studentsArray[1].marks}</p>
     <p>Result : {getResult(studentsArray[1].marks)}</p>
-
   </>
 );
 
