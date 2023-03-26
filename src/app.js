@@ -8,7 +8,7 @@ const studentsArray = [
   {
     name: "Dinesh Abeyrathna",
     regNo: "R172321",
-    email: "dinesh@gmail.com",
+    email: "",
     marks: "70",
   },
 ];
@@ -16,7 +16,11 @@ const studentsArray = [
 function getResult(mark) {
   if (mark <= 100 && 0 <= mark) {
     if (mark >= 80) {
-      return <span style={{ color: "green" }}>A</span>;
+      return (
+        <span style={{ color: "green", fontSize: "40px", fontWeight: "bold" }}>
+          A
+        </span>
+      );
     } else if (mark >= 60) {
       return <span style={{ color: "yellow" }}>B</span>;
     } else if (mark >= 50) {
@@ -31,11 +35,18 @@ function getResult(mark) {
   }
 }
 
+function checkEmail(email) {
+  if (email) {
+    return <p>Email : {email}</p>;
+  }
+}
+
 const student1 = (
   <>
     <h2> Name : {studentsArray[0].name} </h2>
     <p>Reg No : {studentsArray[0].regNo}</p>
-    <p>Email : {studentsArray[0].email}</p>
+    {checkEmail(studentsArray[0].email)}
+    {/* <p>Email : {studentsArray[0].email}</p> */}
     <p>Marks : {studentsArray[0].marks}</p>
     <p>Result : {getResult(studentsArray[0].marks)}</p>
   </>
@@ -45,7 +56,9 @@ const student2 = (
   <>
     <h2> Name : {studentsArray[1].name} </h2>
     <p>Reg No : {studentsArray[1].regNo}</p>
-    <p>Email : {studentsArray[1].email}</p>
+    {/* <p>Email : {studentsArray[1].email}</p> */}
+    {checkEmail(studentsArray[1].email)}
+
     <p>Marks : {studentsArray[1].marks}</p>
     <p>Result : {getResult(studentsArray[1].marks)}</p>
   </>

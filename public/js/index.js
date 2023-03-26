@@ -8,7 +8,7 @@ var studentsArray = [{
 }, {
   name: "Dinesh Abeyrathna",
   regNo: "R172321",
-  email: "dinesh@gmail.com",
+  email: "",
   marks: "70"
 }];
 function getResult(mark) {
@@ -16,7 +16,9 @@ function getResult(mark) {
     if (mark >= 80) {
       return /*#__PURE__*/React.createElement("span", {
         style: {
-          color: "green"
+          color: "green",
+          fontSize: "40px",
+          fontWeight: "bold"
         }
       }, "A");
     } else if (mark >= 60) {
@@ -50,8 +52,13 @@ function getResult(mark) {
     }, "Invalid result");
   }
 }
-var student1 = /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h2", null, " Name : ", studentsArray[0].name, " "), /*#__PURE__*/React.createElement("p", null, "Reg No : ", studentsArray[0].regNo), /*#__PURE__*/React.createElement("p", null, "Email : ", studentsArray[0].email), /*#__PURE__*/React.createElement("p", null, "Marks : ", studentsArray[0].marks), /*#__PURE__*/React.createElement("p", null, "Result : ", getResult(studentsArray[0].marks)));
-var student2 = /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h2", null, " Name : ", studentsArray[1].name, " "), /*#__PURE__*/React.createElement("p", null, "Reg No : ", studentsArray[1].regNo), /*#__PURE__*/React.createElement("p", null, "Email : ", studentsArray[1].email), /*#__PURE__*/React.createElement("p", null, "Marks : ", studentsArray[1].marks), /*#__PURE__*/React.createElement("p", null, "Result : ", getResult(studentsArray[1].marks)));
+function checkEmail(email) {
+  if (email) {
+    return /*#__PURE__*/React.createElement("p", null, "Email : ", email);
+  }
+}
+var student1 = /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h2", null, " Name : ", studentsArray[0].name, " "), /*#__PURE__*/React.createElement("p", null, "Reg No : ", studentsArray[0].regNo), checkEmail(studentsArray[0].email), /*#__PURE__*/React.createElement("p", null, "Marks : ", studentsArray[0].marks), /*#__PURE__*/React.createElement("p", null, "Result : ", getResult(studentsArray[0].marks)));
+var student2 = /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h2", null, " Name : ", studentsArray[1].name, " "), /*#__PURE__*/React.createElement("p", null, "Reg No : ", studentsArray[1].regNo), checkEmail(studentsArray[1].email), /*#__PURE__*/React.createElement("p", null, "Marks : ", studentsArray[1].marks), /*#__PURE__*/React.createElement("p", null, "Result : ", getResult(studentsArray[1].marks)));
 var student = /*#__PURE__*/React.createElement("div", null, student1, " ", /*#__PURE__*/React.createElement("hr", null), " ", student2, /*#__PURE__*/React.createElement("hr", null));
 var appDiv = document.getElementById("app");
 var root = ReactDOM.createRoot(appDiv);
