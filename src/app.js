@@ -41,12 +41,12 @@ function checkEmail(email) {
   }
 }
 
-function isSelected(marks){
-    if(marks>=90){
-        return <span style={{color:'red'}}>Can do special degree</span>
-    }else{
-        return 'Can do only general degree only'
-    }
+function isSelected(marks) {
+  if (marks >= 90) {
+    return <span style={{ color: "red" }}>Can do special degree</span>;
+  } else {
+    return "Can do only general degree only";
+  }
 }
 
 const student1 = (
@@ -57,7 +57,8 @@ const student1 = (
     {/* <p>Email : {studentsArray[0].email}</p> */}
     <p>Marks : {studentsArray[0].marks}</p>
     {isSelected(studentsArray[0].marks)}
-    {studentsArray[0].marks>=90 ? <p>Special degree</p> : <p>General</p>}
+    {studentsArray[0].marks >= 90 ? <p>Special degree</p> : <p>General</p>}
+    {studentsArray[0].email && <p> Email : {studentsArray[0].email}</p>}
 
     <p>Result : {getResult(studentsArray[0].marks)}</p>
   </>
@@ -71,7 +72,9 @@ const student2 = (
     {checkEmail(studentsArray[1].email)}
     <p>Marks : {studentsArray[1].marks}</p>
     {isSelected(studentsArray[1].marks)}
-    {studentsArray[1].marks>=90 ? <p>Special degree</p> : <p>General</p>}
+    {studentsArray[1].marks >= 90 ? <p>Special degree</p> : <p>General</p>}
+    {studentsArray[1].email && <p> Email :{studentsArray[1].email}</p>}
+
     <p>Result : {getResult(studentsArray[1].marks)}</p>
   </>
 );
