@@ -1,14 +1,14 @@
 const studentsArray = [
   {
     name: "Tharushi Nethmini",
-    regNo: "R122321",
+    regNo: "R122578",
     email: "thru@gmail.com",
     marks: "50",
   },
   {
     name: "Dinesh Abeyrathna",
     regNo: "R172321",
-    email: "",
+    email: "dinesh@ymail.com",
     marks: "90",
   },
 ];
@@ -49,45 +49,64 @@ function isSelected(marks) {
   }
 }
 
-const student1 = (
-  <>
-    <h2> Name : {studentsArray[0].name} </h2>
-    <p>Reg No : {studentsArray[0].regNo}</p>
-    {checkEmail(studentsArray[0].email)}
-    {/* <p>Email : {studentsArray[0].email}</p> */}
-    <p>Marks : {studentsArray[0].marks}</p>
-    {isSelected(studentsArray[0].marks)}
-    {studentsArray[0].marks >= 90 ? <p>Special degree</p> : <p>General</p>}
-    {studentsArray[0].email && <p> Email : {studentsArray[0].email}</p>}
+// const student1 = (
+//   <>
+//     <h2> Name : {studentsArray[0].name} </h2>
+//     <p>Reg No : {studentsArray[0].regNo}</p>
+//     {checkEmail(studentsArray[0].email)}
+//     {/* <p>Email : {studentsArray[0].email}</p> */}
+//     <p>Marks : {studentsArray[0].marks}</p>
+//     {isSelected(studentsArray[0].marks)}
+//     {studentsArray[0].marks >= 90 ? <p>Special degree</p> : <p>General</p>}
+//     {studentsArray[0].email && <p> Email : {studentsArray[0].email}</p>}
 
-    <p>Result : {getResult(studentsArray[0].marks)}</p>
-  </>
+//     <p>Result : {getResult(studentsArray[0].marks)}</p>
+//   </>
+// );
+
+// const student2 = (
+//   <>
+//     <h2> Name : {studentsArray[1].name} </h2>
+//     <p>Reg No : {studentsArray[1].regNo}</p>
+//     {/* <p>Email : {studentsArray[1].email}</p> */}
+//     {checkEmail(studentsArray[1].email)}
+//     <p>Marks : {studentsArray[1].marks}</p>
+//     {isSelected(studentsArray[1].marks)}
+//     {studentsArray[1].marks >= 90 ? <p>Special degree</p> : <p>General</p>}
+//     {studentsArray[1].email && <p> Email :{studentsArray[1].email}</p>}
+
+//     <p>Result : {getResult(studentsArray[1].marks)}</p>
+//   </>
 );
 
-const student2 = (
-  <>
-    <h2> Name : {studentsArray[1].name} </h2>
-    <p>Reg No : {studentsArray[1].regNo}</p>
-    {/* <p>Email : {studentsArray[1].email}</p> */}
-    {checkEmail(studentsArray[1].email)}
-    <p>Marks : {studentsArray[1].marks}</p>
-    {isSelected(studentsArray[1].marks)}
-    {studentsArray[1].marks >= 90 ? <p>Special degree</p> : <p>General</p>}
-    {studentsArray[1].email && <p> Email :{studentsArray[1].email}</p>}
+const studentsComponent = studentsArray.map((val, key) => {
+  // console.log(val);
+  // return <div key={key}></div>;
+  return (
+    <>
+      <h2> Name : {val.name} </h2>
+      <p>Reg No : {val.regNo}</p>
+      {/* <p>Email : {studentsArray[1].email}</p> */}
+      {checkEmail(val.email)}
+      <p>Marks : {val.marks}</p>
+      {isSelected(val.marks)}
+      {val.marks >= 90 ? <p>Special degree</p> : <p>General</p>}
+      {val.email && <p> Email :{val.email}</p>}
 
-    <p>Result : {getResult(studentsArray[1].marks)}</p>
-  </>
-);
+      <p>Result : {getResult(val.marks)}</p>
+    </>
+  );
+});
 
-const student = (
-  <div>
-    {student1} <hr /> {student2}
-    <hr />
-  </div>
-);
+// const student = (
+//   <div>
+//     {student1} <hr /> {student2}
+//     <hr />
+//   </div>
+// );
 
 const appDiv = document.getElementById("app");
 
 const root = ReactDOM.createRoot(appDiv);
 
-root.render(student);
+root.render(studentsComponent);
