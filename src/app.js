@@ -5,29 +5,37 @@ const sample = (
   </div>
 );
 
-
 //basic function
 function validNameOfBasicFunction(a, b, c) {
-  console.log(arguments[0]);
-  
+  console.log(arguments);
+
   return a + b + c;
 }
 
-validNameOfBasicFunction(10,20,30);
+validNameOfBasicFunction(10, 20, 30);
 
 //function expression / anonymous functions
 
-const functionExpression = function(){
-  console.log('work anonymus function expression');
+const functionExpression = function () {
+  console.log("work anonymus function expression");
 };
-
 
 functionExpression();
 
-(function(){
-  console.log('Anonymus function working');
+(function () {
+  console.log("Anonymus function working");
 })();
 
+const numbersArray = [10, 20, 30, 40, 50, 60, 70];
+
+// function mapInner(element, index) {
+//   // console.log(element);
+//   console.log("index = " + index + " element = " + element);
+// }
+
+numbersArray.map(function (element, index) {
+  console.log("index = " + index + " element = " + element);
+});
 
 const appDiv = document.getElementById("app");
 
