@@ -6,13 +6,13 @@ const sample = (
 );
 
 //basic function
-function validNameOfBasicFunction(a, b, c) {
-  console.log(arguments);
+// function validNameOfBasicFunction(a, b, c) {
+//   console.log(arguments);
 
-  return a + b + c;
-}
+//   return a + b + c;
+// }
 
-validNameOfBasicFunction(10, 20, 30);
+// validNameOfBasicFunction(10, 20, 30);
 
 //function expression / anonymous functions
 
@@ -26,7 +26,7 @@ functionExpression();
   console.log("Anonymus function working");
 })();
 
-const numbersArray = [10, 20, 30, 40, 50, 60, 70];
+const numbersArray = [10, 20, 30, 40, 50, 60, 7000];
 
 // function mapInner(element, index) {
 //   // console.log(element);
@@ -36,6 +36,16 @@ const numbersArray = [10, 20, 30, 40, 50, 60, 70];
 numbersArray.map(function (element, index) {
   console.log("index = " + index + " element = " + element);
 });
+
+//arrow function
+
+const anofunc = (x) => {
+  return x * x;
+};
+
+console.log(anofunc(10));
+
+
 
 const appDiv = document.getElementById("app");
 

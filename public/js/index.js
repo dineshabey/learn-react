@@ -3,11 +3,13 @@
 var sample = /*#__PURE__*/React.createElement("div", null, "hifssas", /*#__PURE__*/React.createElement("hr", null));
 
 //basic function
-function validNameOfBasicFunction(a, b, c) {
-  console.log(arguments);
-  return a + b + c;
-}
-validNameOfBasicFunction(10, 20, 30);
+// function validNameOfBasicFunction(a, b, c) {
+//   console.log(arguments);
+
+//   return a + b + c;
+// }
+
+// validNameOfBasicFunction(10, 20, 30);
 
 //function expression / anonymous functions
 
@@ -18,7 +20,7 @@ functionExpression();
 (function () {
   console.log("Anonymus function working");
 })();
-var numbersArray = [10, 20, 30, 40, 50, 60, 70];
+var numbersArray = [10, 20, 30, 40, 50, 60, 7000];
 
 // function mapInner(element, index) {
 //   // console.log(element);
@@ -28,6 +30,13 @@ var numbersArray = [10, 20, 30, 40, 50, 60, 70];
 numbersArray.map(function (element, index) {
   console.log("index = " + index + " element = " + element);
 });
+
+//arrow function
+
+var anofunc = function anofunc(x) {
+  return x * x;
+};
+console.log(anofunc(10));
 var appDiv = document.getElementById("app");
 var root = ReactDOM.createRoot(appDiv);
 root.render(sample);
