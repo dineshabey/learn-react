@@ -32,11 +32,16 @@ numbersArray.map(function (element, index) {
 });
 
 //arrow function
-
 var anofunc = function anofunc(x) {
   return x * x;
 };
 console.log(anofunc(10));
+
+//arrow function short-hand syntax
+var arrowFuntionShorthandSyntax = function arrowFuntionShorthandSyntax(x, y) {
+  return x * y;
+};
+console.log(arrowFuntionShorthandSyntax(10, 2));
 var appDiv = document.getElementById("app");
 var root = ReactDOM.createRoot(appDiv);
 root.render(sample);

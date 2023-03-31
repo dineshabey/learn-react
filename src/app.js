@@ -38,14 +38,15 @@ numbersArray.map(function (element, index) {
 });
 
 //arrow function
-
 const anofunc = (x) => {
   return x * x;
 };
-
 console.log(anofunc(10));
 
+//arrow function short-hand syntax
+const arrowFuntionShorthandSyntax = (x, y) => x * y;
 
+console.log(arrowFuntionShorthandSyntax(10, 2));
 
 const appDiv = document.getElementById("app");
 
