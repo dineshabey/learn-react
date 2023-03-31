@@ -27,9 +27,10 @@ var numbersArray = [10, 20, 30, 40, 50, 60, 7000];
 //   console.log("index = " + index + " element = " + element);
 // }
 
-numbersArray.map(function (element, index) {
-  console.log("index = " + index + " element = " + element);
+var mapReturn = numbersArray.map(function (element, index) {
+  return "index = " + index + " element = " + element;
 });
+console.log(mapReturn);
 
 //arrow function
 var anofunc = function anofunc(x) {
