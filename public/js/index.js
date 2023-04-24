@@ -23,9 +23,17 @@ for (var index = 0; index < arr.length; index++) {
 }
 
 //for in loop - ES6
-console.log('============= ES6 for loop');
+console.log("============= ES6 for loop ==========");
 for (var _index in arr) {
   console.log(arr[_index]);
+}
+console.log("============= ES6 for-in-object =====");
+var user = {
+  name: "Dinesh",
+  skill: "react"
+};
+for (var key in user) {
+  console.log(key, user[key]);
 }
 console.log(msg);
 console.log(msg2);

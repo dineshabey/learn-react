@@ -13,10 +13,18 @@ for (let index = 0; index < arr.length; index++) {
 }
 
 //for in loop - ES6
-console.log('============= ES6 for loop');
+console.log("============= ES6 for loop ==========");
 
 for (let index in arr) {
   console.log(arr[index]);
+}
+
+console.log("============= ES6 for-in-object =====");
+
+const user = { name: "Dinesh", skill: "react" };
+
+for (let key in user) {
+  console.log(key, user[key]);
 }
 
 console.log(msg);
