@@ -1,48 +1,26 @@
 "use strict";
 
-var sample = /*#__PURE__*/React.createElement("div", null, "hifssas", /*#__PURE__*/React.createElement("hr", null));
-
-//basic function
-// function validNameOfBasicFunction(a, b, c) {
-//   console.log(arguments);
-
-//   return a + b + c;
-// }
-
-// validNameOfBasicFunction(10, 20, 30);
-
-//function expression / anonymous functions
-
-var functionExpression = function functionExpression() {
-  console.log("work anonymus function expression");
-};
-functionExpression();
-(function () {
-  console.log("Anonymus function working");
-})();
-var numbersArray = [10, 20, 30, 40, 50, 60, 7000];
-
-// function mapInner(element, index) {
-//   // console.log(element);
-//   console.log("index = " + index + " element = " + element);
-// }
-
-var mapReturn = numbersArray.map(function (element, index) {
-  return "index = " + index + " element = " + element;
-});
-console.log(mapReturn);
-
-//arrow function
-var anofunc = function anofunc(x) {
-  return x * x;
-};
-console.log(anofunc(10));
-
-//arrow function short-hand syntax
-var arrowFuntionShorthandSyntax = function arrowFuntionShorthandSyntax(x, y) {
-  return x * y;
-};
-console.log(arrowFuntionShorthandSyntax(10, 2));
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+var view = /*#__PURE__*/React.createElement("div", {
+  style: {
+    color: "red"
+  }
+}, " Hi ");
+var student = [_defineProperty({
+  name: "dinesh"
+}, "name", "roshan")];
+var username = "Dinesh";
+var regNo = "R122321";
+var msg = regNo + "" + username;
+var msg2 = "".concat(regNo, " ").concat(username);
+console.log(msg);
+console.log(msg2);
+console.log(student);
 var appDiv = document.getElementById("app");
 var root = ReactDOM.createRoot(appDiv);
-root.render(sample);
+root.render(view);
+
+//# sourceMappingURL=index.js.map
