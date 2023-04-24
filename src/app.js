@@ -69,7 +69,18 @@ const newStudent = { name: "Dinesh", regno: "R45454" };
 let developer = { skills: "React", project: "Class App" };
 let developerStudent = {};
 Object.assign(developerStudent, newStudent, developer);
+let employee = { regno: "R6656", email: "dinsh@gmail.com" };
+let developerStudentEmployee = {};
+let developerStudentEmployee2 = {};
+
 console.log(developerStudent);
+
+//change only same key value 
+Object.assign(developerStudentEmployee, developerStudent, employee);
+Object.assign(developerStudentEmployee2, employee, developerStudent);
+
+console.log(developerStudentEmployee);
+console.log(developerStudentEmployee2);
 
 // console.log('student',student);
 // console.log('alStudent',alStudent);

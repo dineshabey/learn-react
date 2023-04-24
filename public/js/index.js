@@ -89,7 +89,19 @@ var developer = {
 };
 var developerStudent = {};
 Object.assign(developerStudent, newStudent, developer);
+var employee = {
+  regno: "R6656",
+  email: "dinsh@gmail.com"
+};
+var developerStudentEmployee = {};
+var developerStudentEmployee2 = {};
 console.log(developerStudent);
+
+//change only same key value 
+Object.assign(developerStudentEmployee, developerStudent, employee);
+Object.assign(developerStudentEmployee2, employee, developerStudent);
+console.log(developerStudentEmployee);
+console.log(developerStudentEmployee2);
 
 // console.log('student',student);
 // console.log('alStudent',alStudent);
