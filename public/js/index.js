@@ -57,6 +57,12 @@ try {
 } finally {
   _iterator.f();
 }
+console.log("============= ES6 deafault parameters =====");
+function welcome() {
+  var user = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "Guest";
+  return "Hello ".concat(user, " !");
+}
+console.log(welcome('Dinesh'));
 console.log(msg);
 console.log(msg2);
 console.log(student);
