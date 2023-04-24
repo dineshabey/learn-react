@@ -33,6 +33,14 @@ for (let val of arr) {
   console.log(val);
 }
 
+console.log("============= ES6 for-of usages =====");
+
+
+let myWord = "React is my life";
+for (let val of myWord) {
+  console.log(val);
+}
+
 console.log(msg);
 console.log(msg2);
 
