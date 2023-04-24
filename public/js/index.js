@@ -15,7 +15,18 @@ var student = [_defineProperty({
 var username = "Dinesh";
 var regNo = "R122321";
 var msg = regNo + "" + username;
-var msg2 = "".concat(regNo, " ").concat(username);
+var msg2 = "".concat(regNo, " ").concat(username); //ES6 concat
+var arr = ["A", "B", "C", "D", "E", "F"];
+for (var index = 0; index < arr.length; index++) {
+  var element = arr[index];
+  console.log(element);
+}
+
+//for in loop - ES6
+console.log('============= ES6 for loop');
+for (var _index in arr) {
+  console.log(arr[_index]);
+}
 console.log(msg);
 console.log(msg2);
 console.log(student);

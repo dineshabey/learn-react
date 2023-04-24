@@ -4,12 +4,23 @@ const student = [{ name: "dinesh", name: "roshan" }];
 let username = "Dinesh";
 let regNo = "R122321";
 let msg = regNo + "" + username;
-let msg2 = `${regNo} ${username}`;
+let msg2 = `${regNo} ${username}`; //ES6 concat
+let arr = ["A", "B", "C", "D", "E", "F"];
 
-console.log(msg)
-console.log(msg2)
+for (let index = 0; index < arr.length; index++) {
+  const element = arr[index];
+  console.log(element);
+}
 
+//for in loop - ES6
+console.log('============= ES6 for loop');
 
+for (let index in arr) {
+  console.log(arr[index]);
+}
+
+console.log(msg);
+console.log(msg2);
 
 console.log(student);
 
