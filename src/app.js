@@ -46,7 +46,33 @@ function welcome(user = "Guest") {
   return `Hello ${user} !`;
 }
 
-console.log(welcome('Dinesh'));
+console.log(welcome("Dinesh"));
+
+console.log("============= ES6 object ==========");
+
+const newStudent = { name: "Dinesh", regno: "R45454" };
+
+// let maths = 39;
+// let alMaths;
+
+// alMaths = maths;
+
+// console.log('maths',maths);
+// console.log('alMaths',alMaths);
+
+// const alStudent = {};
+// Object.assign(alStudent,student);
+
+// let alStudent;
+// alStudent = student;
+
+let developer = { skills: "React", project: "Class App" };
+let developerStudent = {};
+Object.assign(developerStudent, newStudent, developer);
+console.log(developerStudent);
+
+// console.log('student',student);
+// console.log('alStudent',alStudent);
 
 console.log(msg);
 console.log(msg2);

@@ -62,7 +62,38 @@ function welcome() {
   var user = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "Guest";
   return "Hello ".concat(user, " !");
 }
-console.log(welcome('Dinesh'));
+console.log(welcome("Dinesh"));
+console.log("============= ES6 object ==========");
+var newStudent = {
+  name: "Dinesh",
+  regno: "R45454"
+};
+
+// let maths = 39;
+// let alMaths;
+
+// alMaths = maths;
+
+// console.log('maths',maths);
+// console.log('alMaths',alMaths);
+
+// const alStudent = {};
+// Object.assign(alStudent,student);
+
+// let alStudent;
+// alStudent = student;
+
+var developer = {
+  skills: "React",
+  project: "Class App"
+};
+var developerStudent = {};
+Object.assign(developerStudent, newStudent, developer);
+console.log(developerStudent);
+
+// console.log('student',student);
+// console.log('alStudent',alStudent);
+
 console.log(msg);
 console.log(msg2);
 console.log(student);
