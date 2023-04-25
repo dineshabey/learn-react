@@ -89,6 +89,12 @@ var ingedients = {
 console.log(Object.keys(ingedients));
 console.log(Object.values(ingedients));
 console.log(Object.entries(ingedients));
+console.log("---------- ES8 Features :- )-----------");
+var accountNumber = '88012'; //need 10 numbers
+var newAcumber = accountNumber.padStart(10, 0);
+var newAcumberWithX = accountNumber.padEnd(10, 'X');
+console.log(newAcumber);
+console.log(newAcumberWithX);
 var appDiv = document.getElementById("app");
 var root = ReactDOM.createRoot(appDiv);
 root.render(view);
