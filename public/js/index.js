@@ -45,9 +45,12 @@ console.log("Last name :- ", firstName);
 console.log("First name :- ", firstName);
 console.log("-------- ES6 process -----------");
 var studentFirstName = student.Fname,
-  studentlastName = student.Lname;
+  studentlastName = student.Lname,
+  _student$isActive = student.isActive,
+  isActive = _student$isActive === void 0 ? false : _student$isActive;
 console.log("Last name :- ", studentFirstName);
 console.log("First name :- ", studentlastName);
+console.log("Is Active :- ", isActive);
 var appDiv = document.getElementById("app");
 var root = ReactDOM.createRoot(appDiv);
 root.render(view);
