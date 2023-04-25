@@ -1,65 +1,22 @@
-const view = <div style={{ color: "red" }}> Es6 Features </div>;
+const view = <div style={{ color: "blue" }}>ES6 Functions</div>;
 
-const results = [30, 50, 80];
+console.log("---------- ES6 Features :- Functions -----------");
 
-let maths = results[0];
-let chemistry = results[1];
-let bio = results[2];
+const myFunction = (myAvg) => {
+  console.log(myAvg);
+};
 
-console.log("maths", maths);
-console.log("chemistry", chemistry);
-console.log("bio", bio);
+// const myNextFunctions = (myPara) => {
+//   let { fName, lName } = myPara;
+//   console.log(fName);
+//   console.log(lName);
+// };
 
-console.log("---------- ES6 Features :- Array destructuring -----------");
+// const myObject = { fName: "Charith", lName: "Dinesh" };
 
-let [math1, chem1, bio1] = results;
+// myNextFunctions(myObject);
 
-console.log("maths", math1);
-console.log("chemistry", chem1);
-console.log("bio", bio1);
-
-console.log("---------- ES6 Features :- Variyabale slaping -----------");
-
-let width = 100;
-let height = 200;
-
-console.log("-------- Normal process -----------");
-
-let tem = width;
-width = height;
-height = tem;
-
-console.log("width", width);
-console.log("height", height);
-
-console.log("-------- ES6 process -----------");
-
-[width, height] = [height, width];
-
-console.log("width", width);
-console.log("height", height);
-
-console.log("---------- ES6 Features :- objet destruturing -----------");
-
-const student = { Fname: "Dinesh", Lname: "Abeysinghe" };
-
-let firstName = student.Fname;
-let lastName = student.Lname;
-
-console.log("Last name :- ", firstName);
-console.log("First name :- ", firstName);
-
-console.log("-------- ES6 process -----------");
-
-let {
-  Fname: studentFirstName,
-  Lname: studentlastName,
-  isActive = false,
-} = student;
-
-console.log("Last name :- ", studentFirstName);
-console.log("First name :- ", studentlastName);
-console.log("Is Active :- ", isActive);
+myFunction({ fName: "dinesh", lName: "Abeysinghe" });
 
 const appDiv = document.getElementById("app");
 const root = ReactDOM.createRoot(appDiv);
