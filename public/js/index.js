@@ -14,9 +14,10 @@ myFunction({
   lName: "Abeysinghe"
 });
 console.log("---------- ES6 Features :- Functions destructure-----------");
-var myNextFunctions = function myNextFunctions(myPara) {
-  var fName = myPara.fName,
-    lName = myPara.lName;
+var myNextFunctions = function myNextFunctions(_ref) {
+  var fName = _ref.fName,
+    lName = _ref.lName;
+  //   let { fName, lName } = myPara;
   console.log(fName);
   console.log(lName);
 };

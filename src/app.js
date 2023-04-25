@@ -10,8 +10,8 @@ myFunction({ fName: "dinesh", lName: "Abeysinghe" });
 
 console.log("---------- ES6 Features :- Functions destructure-----------");
 
-const myNextFunctions = (myPara) => {
-  let { fName, lName } = myPara;
+const myNextFunctions = ({fName,lName}) => {
+//   let { fName, lName } = myPara;
   console.log(fName);
   console.log(lName);
 };
