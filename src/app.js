@@ -78,10 +78,16 @@ let userName = { fName: "Radika", lName: "Dilanka" };
 let cource = { cName: "React", cNo: "1235" };
 let address = { city: "Anamaduwa", street: "Kalaniya", postalCode: "454656" };
 
-
-let fullDetails = {...userName,...cource,...address};
+let fullDetails = { ...userName, ...cource, ...address };
 console.log(fullDetails);
 
+console.log("---------- ES7 Features :- key,val)-----------");
+
+const ingedients = { egs: 4, lemon: 5, sugar: "500g", butter: "1kg" };
+
+console.log(Object.keys(ingedients));
+console.log(Object.values(ingedients));
+console.log(Object.entries(ingedients));
 
 const appDiv = document.getElementById("app");
 const root = ReactDOM.createRoot(appDiv);

@@ -79,6 +79,16 @@ var address = {
 };
 var fullDetails = _objectSpread(_objectSpread(_objectSpread({}, userName), cource), address);
 console.log(fullDetails);
+console.log("---------- ES7 Features :- key,val)-----------");
+var ingedients = {
+  egs: 4,
+  lemon: 5,
+  sugar: "500g",
+  butter: "1kg"
+};
+console.log(Object.keys(ingedients));
+console.log(Object.values(ingedients));
+console.log(Object.entries(ingedients));
 var appDiv = document.getElementById("app");
 var root = ReactDOM.createRoot(appDiv);
 root.render(view);
