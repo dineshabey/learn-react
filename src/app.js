@@ -96,6 +96,8 @@ let newAcumber = accountNumber.padStart(10,0);
 let newAcumberWithX = accountNumber.padEnd(10,'X');
 
 console.log(newAcumber);
+
+
 console.log(newAcumberWithX);
 
 
