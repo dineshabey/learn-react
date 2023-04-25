@@ -60,7 +60,11 @@ const finalES6 = [10, ...startNumber, 50, ...endNumber, 80];
 
 console.log(finalES6);
 
+console.log("---------- ES6 Features :- Functions with array push / Spread operator )-----------");
 
+const finalES6Arr = [10, startNumber, 50, endNumber, 80];
+
+console.log(finalES6Arr);
 
 const appDiv = document.getElementById("app");
 const root = ReactDOM.createRoot(appDiv);
