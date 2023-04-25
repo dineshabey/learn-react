@@ -19,6 +19,28 @@ console.log('maths',math1);
 console.log('chemistry',chem1);
 console.log('bio',bio1);
 
+console.log('---------- ES6 Features :- Variyabale slaping -----------');
+
+
+let width = 100;
+let height = 200;
+
+console.log('--------Normal process-----------');
+
+
+let tem = width;
+width = height;
+height = tem;
+
+console.log('width',width);
+console.log('height',height);
+
+console.log('--------ES6 process-----------');
+
+[width,height] = [height,width];
+
+console.log('width',width);
+console.log('height',height)
 
 
 
