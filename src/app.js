@@ -51,10 +51,10 @@ console.log("First name :- ", firstName);
 
 console.log("-------- ES6 process -----------");
 
-let { Fname, Lname } = student;
+let { Fname: studentFirstName, Lname: studentlastName } = student;
 
-console.log("Last name :- ", Fname);
-console.log("First name :- ", Lname);
+console.log("Last name :- ", studentFirstName);
+console.log("First name :- ", studentlastName);
 
 const appDiv = document.getElementById("app");
 const root = ReactDOM.createRoot(appDiv);

@@ -44,10 +44,10 @@ var lastName = student.Lname;
 console.log("Last name :- ", firstName);
 console.log("First name :- ", firstName);
 console.log("-------- ES6 process -----------");
-var Fname = student.Fname,
-  Lname = student.Lname;
-console.log("Last name :- ", Fname);
-console.log("First name :- ", Lname);
+var studentFirstName = student.Fname,
+  studentlastName = student.Lname;
+console.log("Last name :- ", studentFirstName);
+console.log("First name :- ", studentlastName);
 var appDiv = document.getElementById("app");
 var root = ReactDOM.createRoot(appDiv);
 root.render(view);
