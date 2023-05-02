@@ -39,17 +39,27 @@ class Rectangle {
   get area() {
     return this.height * this.width;
   }
+  set reactColor(color) {
+    if (color === "red") {
+      // this.color = color;
+      this.isActive = false;
+    } else {
+      this.isActive = true;
+    }
+  }
 }
 
 let myVal = new Rectangle(10, 10);
 
+// myVal.color = 'red';
+
+myVal.reactColor = "red";
+
+console.log(myVal);
+
 console.log("Cal-area", myVal.claArea());
 
 console.log("Get-area", myVal.area);
-
-
-
-
 
 const appDiv = document.getElementById("app");
 const root = ReactDOM.createRoot(appDiv);

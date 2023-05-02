@@ -46,10 +46,25 @@ var Rectangle = /*#__PURE__*/function () {
     get: function get() {
       return this.height * this.width;
     }
+  }, {
+    key: "reactColor",
+    set: function set(color) {
+      if (color === "red") {
+        // this.color = color;
+        this.isActive = false;
+      } else {
+        this.isActive = true;
+      }
+    }
   }]);
   return Rectangle;
 }();
 var myVal = new Rectangle(10, 10);
+
+// myVal.color = 'red';
+
+myVal.reactColor = "red";
+console.log(myVal);
 console.log("Cal-area", myVal.claArea());
 console.log("Get-area", myVal.area);
 var appDiv = document.getElementById("app");
