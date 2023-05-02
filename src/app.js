@@ -47,9 +47,18 @@ class Rectangle {
       this.isActive = true;
     }
   }
+
+  static circumference(x, y) {
+    this.x = x;
+    this.y = y;
+
+    return x + y;
+  }
 }
 
 let myVal = new Rectangle(10, 10);
+
+console.log(Rectangle.circumference(10, 10));
 
 // myVal.color = 'red';
 

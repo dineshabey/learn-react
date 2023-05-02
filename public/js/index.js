@@ -56,10 +56,18 @@ var Rectangle = /*#__PURE__*/function () {
         this.isActive = true;
       }
     }
+  }], [{
+    key: "circumference",
+    value: function circumference(x, y) {
+      this.x = x;
+      this.y = y;
+      return x + y;
+    }
   }]);
   return Rectangle;
 }();
 var myVal = new Rectangle(10, 10);
+console.log(Rectangle.circumference(10, 10));
 
 // myVal.color = 'red';
 
