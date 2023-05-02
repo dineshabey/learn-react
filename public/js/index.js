@@ -16,8 +16,42 @@ var student = /*#__PURE__*/_createClass(function student(name, regNo) {
   this.name = name;
   this.regNo = regNo;
 });
-var dinesh = new student('Dinesh', '20');
+var dinesh = new student("Dinesh", "20");
+var dinesh1 = {
+  name: "Dinesh",
+  regNo: "20"
+};
 console.log(dinesh);
+console.log(dinesh1);
+var reactStudent = /*#__PURE__*/_createClass(function student(name, regNo) {
+  _classCallCheck(this, student);
+  this.name = name;
+  this.regNo = regNo;
+});
+var rs = new reactStudent("Radika", "R3000");
+console.log(rs);
+var Rectangle = /*#__PURE__*/function () {
+  function Rectangle(width, height) {
+    _classCallCheck(this, Rectangle);
+    this.width = width;
+    this.height = height;
+  }
+  _createClass(Rectangle, [{
+    key: "claArea",
+    value: function claArea() {
+      return this.height * this.width;
+    }
+  }, {
+    key: "area",
+    get: function get() {
+      return this.height * this.width;
+    }
+  }]);
+  return Rectangle;
+}();
+var myVal = new Rectangle(10, 10);
+console.log("Cal-area", myVal.claArea());
+console.log("Get-area", myVal.area);
 var appDiv = document.getElementById("app");
 var root = ReactDOM.createRoot(appDiv);
 root.render(view);
